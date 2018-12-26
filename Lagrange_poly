@@ -1,0 +1,11 @@
+function [yi] = Lagrange_polynomial(xi,x,i)
+%UNTITLED2 Summary of this function goes here
+%   Detailed explanation goes here
+yi=1;
+for j=0:i-1
+    yi=yi.*(x-xi(j+1))./(xi(i+1)-xi(j+1));
+end
+for j=i+1:length(xi)-1
+    yi=yi.*(x-xi(j+1))./(xi(i+1)-xi(j+1));
+end
+end
